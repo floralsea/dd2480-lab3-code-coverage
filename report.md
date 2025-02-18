@@ -14,13 +14,57 @@ jsoniter (json-iterator) is fast and flexible JSON parser available in Java and 
 
 ## Onboarding experience
 
-Did it build and run as documented?
-    
-See the assignment for details; if everything works out of the box,
-there is no need to write much here. If the first project(s) you picked
-ended up being unsuitable, you can describe the "onboarding experience"
-for each project, along with reason(s) why you changed to a different one.
+**1. Did it build and run as documented?**
 
+Yes, it build and run as [documented](http://jsoniter.com/java-features.html).
+
+**(a) Did you have to install a lot of additional tools to build the software?**
+
+This tool (jsoniter) has two different versions: Java and Golang, 
+since we focus on Java programming language for both the lab and the course, 
+we chose to build and run its Java version locally. As documented, we don't have
+to install a lot of additional tools to build the software. However, though we just
+need to add **_dependency_** to pom.xml in **_Maven_** project then we could use the software,
+the developers don't provide very clear instructions for other types of Java projects 
+(e.g. Gradle or non Mavan/Gradle project).
+
+**(b) Were those tools well documented?**
+
+Generally, for different **_APIs_** in jsoniter, it's clear and well documented, as described in the 
+[document](http://jsoniter.com/java-features.html), they have instructions and examples for how 
+to use different types of APIs. And the developers provide both English and Chinese documentation, it's 
+especially benefit for our group.
+
+However, for the project itself, it's not clearly documented. 
+Specifically, we encountered complication error when we ran tests locally. And it was updated several 
+years ago, though we updated dependencies, we still couldn't pass all tests in the project. In addition, 
+we have to use a lot external links to checkout their full benchmark.
+
+**(c) Were other components installed automatically by the build script?**
+
+Yes, after updating a few necessary dependencies to match the correct JDK version, running mvn clean install 
+automatically downloaded jsoniter and its dependencies. Maven handled the dependency resolution and 
+build process without additional manual intervention.
+
+**(d) Did the build conclude automatically without errors?**
+
+The build process completed successfully, as indicated by the **_BUILD SUCCESS_** message. 
+However, the test phase encountered failures, with 2 test failures and 148 errors in 705 Tests.
+
+**(e) How well do examples and tests run on your system(s)?**
+
+The tests did not run smoothly, as 148 errors occurred during execution.
+The failures may be due to Java version compatibility or internal issues 
+in jsoniter. Therefore, further investigation may be needed.
+
+**_2. Do you plan to continue or choose another project?_**
+
+We plan to continue with this project despite the test failures. 
+The lab requires us to analyze code complexity, measure coverage, 
+and improve testing rather than fixing all existing issues. 
+Since we can still run JaCoCo and Lizard to gather relevant data, 
+the project remains suitable for our analysis. We will document the test failures 
+and consider them as part of our evaluation.
 
 ## Complexity
 
